@@ -17,13 +17,13 @@
   ## Usage
   Enter the information required by each field to generate a unique readme!
   ## License
-  undefined
+  Creative Commons
   ## Contributions
   James Primitive AKA Christopher Hoke
   ## Testing
   Tested in VScode on my home machine, works fine. It was used to create THIS readme. 
   ## Repository
-  
+  https://github.com/PrimitiveJ/Readle-Me-This
   ## GitHub
   primitiveJ
   ## Contact
