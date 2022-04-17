@@ -37,3 +37,242 @@ const unlicense="[![License: Unlicense](https://img.shields.io/badge/license-Unl
 const WTFPL= "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)"
 const zLib ="[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)"
 const licenses = [apache, boost, BSD3, BSD2, CC0, CC4, CCBYSA, CCBYNC, CCBYND, CCBYNCSA, CCBYNCND, eclipse, gnuv3, gnuv2, gnuagplv3, gnuLGPLv3, gnuFDL, hippo2, hippo3, IPL, ISC, MIT, MPL, ODC, ODbL, PDDL, perl, artistic, OFL, unlicense, WTFPL, zLib]
+
+let choices =  ""
+licenses.forEach(myFunction)
+
+function myFunction(value, index, array) {
+    choices+= "{" + "name:" + value + "}" + ","
+}
+const questions = [
+    {
+      type: 'input',
+      name: 'title',
+      message: 'Type your project title:',
+      default: '',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Type a description of your project:',
+        default: '',
+    },
+    
+    {
+        type:'input',
+        name: 'install',
+        message: "Enter all instructions for installation:",
+        default:'',
+    },
+
+    {
+        type:'input',
+        name: 'usage',
+        message: "Enter all instructions for usage:",
+        default:'',
+    },
+
+
+    {
+        type: 'checkbox',
+        message: 'Select licenses',
+        name: 'licenses',
+        choices: [
+          new inquirer.Separator(' = LICENSES = '),
+          {
+              
+            name: licenses[0]},
+        
+            {
+            
+            name:licenses[1]},
+
+            {
+            
+            name:licenses[2]},
+        
+            {
+            
+            name:licenses[3]},
+        
+            {
+            
+            name:licenses[4]},
+        
+            {
+            
+            name:licenses[5]},
+
+            {
+            
+            name:licenses[6]},
+            
+            {
+            
+            name:licenses[7]},
+        
+            {
+            
+            name:licenses[8]},
+        
+            {
+            
+            name:licenses[9]},
+        
+            {
+            
+            name:licenses[10]},
+        
+            {
+            
+            name:licenses[11]},
+        
+            {
+            
+            name:licenses[12]},
+            {
+              
+            name: licenses[13]},
+            
+                {
+                
+            name:licenses[14]},
+    
+                {
+                
+            name:licenses[15]},
+            
+                {
+                
+            name:licenses[16]},
+            
+                {
+                
+            name:licenses[17]},
+            
+                {
+                
+            name:licenses[18]},
+    
+                {
+                
+            name:licenses[19]},
+                
+                {
+                
+            name:licenses[20]},
+            
+                {
+                
+            name:licenses[21]},
+            
+                {
+                
+            name:licenses[22]},
+            
+                {
+                
+            name:licenses[23]},
+            
+                {
+                
+            name:licenses[24]},
+            
+                {
+                
+            name:licenses[25]},
+               
+            {
+                    
+            name:licenses[26]},
+            
+                {
+                
+            name:licenses[27]},
+            
+                {
+                
+            name:licenses[28]},
+            
+                {
+                
+            name:licenses[29]},
+            
+                {
+                
+            name:licenses[30]}
+        ]
+    },
+
+    {
+        type:'input',
+        name: 'contributors',
+        message: "Enter all contributors here:",
+        default:'',
+    },
+
+    {
+        type:'input',
+        name: 'gitrepo',
+        message: "Enter github repo here:",
+        default:'',
+    },
+
+    {
+        type:'input',
+        name: 'gitusername',
+        message: "Enter github username here:",
+        default:'',
+    },
+
+    {
+        type:'input',
+        name: 'tests',
+        message: "Enter all test instructions here:",
+        default:'',
+    },
+
+    {
+        type:'input',
+        name: 'questionscontact',
+        message: "Enter contact for users to ask additional questions here:",
+        default:'',
+    },
+];
+
+const promptUser = () => {
+    return inquirer.prompt(questions);
+};
+
+
+// TODO: Create a function to write README file
+function writeToFile(data) {
+    fs.writeFile('./README.md', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        // when the README has been created 
+        } else {
+            console.log("Your README.md file has been successfully created!")
+        }
+    });
+}
+
+
+// TODO: Create a function to initialize app
+function init() {
+    promptUser()
+    .then(function(data) {
+        return generateMarkdown(data);
+    })
+    .then(function(data) {
+    writeToFile(data)
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
+}
+
+// Function call to initialize app
+init();
