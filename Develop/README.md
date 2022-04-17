@@ -1,9 +1,9 @@
 
-  # Random Project
+  # ReadlemeThis
   ## Badge
-  [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC_BY--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nd/4.0/),[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/),[![License: CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
   ## Description 
-  This is a project
+  A simple CLI node.js app that allows you to create professional-looking readme.md files
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
@@ -13,17 +13,17 @@
   - [Repository Link](#Repository)
   - [GitHub Info](#GitHub) 
   ## Installation
-  Download it and install it, use node.js with inquirer 
+  1. Clone Github Repo 2. Need Node.JS and inquirer NPM 3. run in terminal (node.js index)
   ## Usage
-  Use it to make readmes
+  Enter the information required by each field to generate a unique readme!
   ## License
   undefined
   ## Contributions
-  James Hoke/Chris Hoke
+  James Primitive AKA Christopher Hoke
   ## Testing
-  test it 
+  Tested in VScode on my home machine, works fine. It was used to create THIS readme. 
   ## Repository
-  repogoeshere
+  
   ## GitHub
   primitiveJ
   ## Contact
