@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 const generateMarkdown = require ('./utils/generateMarkdown.js');
+const licensesMap = require('./utils/licenses')
 // TODO: Create an array of questions for user input
 
 const apache = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
@@ -77,132 +78,10 @@ const questions = [
         type: 'checkbox',
         message: 'Select licenses',
         name: 'licenses',
-        choices: [
-          new inquirer.Separator(' = LICENSES = '),
-          {
-              
-            name: licenses[0]},
-        
-            {
-            
-            name:licenses[1]},
-
-            {
-            
-            name:licenses[2]},
-        
-            {
-            
-            name:licenses[3]},
-        
-            {
-            
-            name:licenses[4]},
-        
-            {
-            
-            name:licenses[5]},
-
-            {
-            
-            name:licenses[6]},
-            
-            {
-            
-            name:licenses[7]},
-        
-            {
-            
-            name:licenses[8]},
-        
-            {
-            
-            name:licenses[9]},
-        
-            {
-            
-            name:licenses[10]},
-        
-            {
-            
-            name:licenses[11]},
-        
-            {
-            
-            name:licenses[12]},
-            {
-              
-            name: licenses[13]},
-            
-                {
-                
-            name:licenses[14]},
-    
-                {
-                
-            name:licenses[15]},
-            
-                {
-                
-            name:licenses[16]},
-            
-                {
-                
-            name:licenses[17]},
-            
-                {
-                
-            name:licenses[18]},
-    
-                {
-                
-            name:licenses[19]},
-                
-                {
-                
-            name:licenses[20]},
-            
-                {
-                
-            name:licenses[21]},
-            
-                {
-                
-            name:licenses[22]},
-            
-                {
-                
-            name:licenses[23]},
-            
-                {
-                
-            name:licenses[24]},
-            
-                {
-                
-            name:licenses[25]},
-               
-            {
-                    
-            name:licenses[26]},
-            
-                {
-                
-            name:licenses[27]},
-            
-                {
-                
-            name:licenses[28]},
-            
-                {
-                
-            name:licenses[29]},
-            
-                {
-                
-            name:licenses[30]}
-        ]
+        choices: 
+         licensesMap   
     },
+   
 
     {
         type:'input',
