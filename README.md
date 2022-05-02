@@ -6,7 +6,6 @@
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
-	@@ -13,17 +13,17 @@
   - [Repository Link](#Repository)
   - [GitHub Info](#GitHub) 
   ## Installation
